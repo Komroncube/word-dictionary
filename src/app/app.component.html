@@ -10,7 +10,9 @@
   <button>Qidirish</button>
 
   <div class="words">
-    <app-word-card-component *ngFor="let word of [].constructor(10)"></app-word-card-component>
+    @for(word of words; track word.id) {
+      <app-word-card-component [word_card] = "word"></app-word-card-component>
+    }
     
   </div>
 
