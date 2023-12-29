@@ -1,19 +1,8 @@
-<header>
+<header class="header">
   <nav class="brand-name">
     <!-- <a [routerLink] = ['/']> -->
       <span><img src="../assets/logo.png" alt="logo">words</span>
     <!-- </a> -->
   </nav>
 </header>
-<main>
-  <input type="text" name="" placeholder="Izlash" id="">
-  <button>Qidirish</button>
-
-  <div class="words">
-    @for(word of words; track word.id) {
-      <app-word-card-component [word_card] = "word"></app-word-card-component>
-    }
-    
-  </div>
-
-</main>
+<app-home></app-home>
