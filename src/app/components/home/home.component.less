@@ -1,0 +1,16 @@
+main {
+    padding: 20px;
+
+    .words {
+        padding-top: 10px;
+        gap:10px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        @media( max-width : 800px)
+        {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+}
