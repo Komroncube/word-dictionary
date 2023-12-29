@@ -1,4 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+export interface IWordCard {
+  id:number;
+  word: string;
+  translation: string;
+  example: string;
+  photo: string;
+};
 
 @Component({
   selector: 'app-word-card-component',
@@ -8,10 +16,7 @@ import { Component } from '@angular/core';
   styleUrl: './word-card-component.component.less'
 })
 export class WordCardComponentComponent {
-  word_card!: {
-    word: string;
-    translation: string;
-    example: string;
-    photo: string;
-  };
+  @Input()
+  word_card!:IWordCard
 }
+
