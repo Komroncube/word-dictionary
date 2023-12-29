@@ -1,12 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-export interface IWordCard {
-  id:number;
-  word: string;
-  translation: string;
-  example: string;
-  photo: string;
-};
+import { IWordCard } from '../../iword-card';
 
 @Component({
   selector: 'app-word-card-component',
@@ -19,4 +12,6 @@ export class WordCardComponentComponent {
   @Input()
   word_card!:IWordCard
 }
+
+export { IWordCard };
 
