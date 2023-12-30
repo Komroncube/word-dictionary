@@ -18,18 +18,27 @@ export class HomeComponent {
    *
    */
   constructor(private wordService:WordService, private router: Router) {
-    this.filteredWords = wordService.getAllWords();
+    wordService.getAllWords().then(words => {
+      this.words = words;
+      this.filteredWords = words
+    })
+
   }
+
+    /**
+     * 
+    */
+    filteredWords!: IWordCard[] 
     /**
      * 
      */
-  filteredWords: IWordCard[] 
+    words!: IWordCard[]
     /**
      * 
      * @param text searching text
      */
   search(text:string){
-    this.filteredWords = this.wordService.getAllWords().filter( word => word.word
+    this.filteredWords = this.words.filter( word => word.word
                                   .toLocaleLowerCase()
                                   .includes(text.toLocaleLowerCase()))
   }
