@@ -1,0 +1,19 @@
+<article>
+    <img 
+        [src]="word?.photo" 
+        class = 'word-photo'
+        alt="Photo of {{ word?.word}}"
+    />
+    <section class="word-details">
+        <h2 class="word-details__word">{{word?.word}}</h2>
+        <p class="word-details__translation">{{word?.translation}}</p>
+
+        <h2 class="word-details__example-title">Misol gap</h2>
+        <p class="word_details__example">{{ word?.example }}</p>
+    </section>
+
+    <section class="leave-comment">
+        <h2>izoh qoldirish</h2>
+    </section>
+</article>
+
