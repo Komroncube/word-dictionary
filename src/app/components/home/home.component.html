@@ -4,7 +4,9 @@
   
     <div class="words">
       @for(word of filteredWords; track word.id) {
-        <app-word-card-component [word_card] = "word"></app-word-card-component>
+        <app-word-card-component 
+            (click)="navigateToDetails(word.id)" 
+            [word_card] = "word"></app-word-card-component>
       }
       
     </div>
