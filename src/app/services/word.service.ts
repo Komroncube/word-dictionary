@@ -87,4 +87,7 @@ export class WordService {
   getWordById(id:number) {
     return this.words.find(x => x.id===id)
   }
+  sendData(fio:string, comment:string){
+    alert(`${fio}: ${comment}`)
+  }
 }
