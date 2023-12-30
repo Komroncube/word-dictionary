@@ -31,7 +31,9 @@ export class DetailsComponent {
    */
   constructor(private route:ActivatedRoute, private wordService:WordService) {
     const wordId:string = this.route.snapshot.params['id']
-    this.word = wordService.getWordById(+wordId)
+    wordService.getWordById(+wordId).then( word => {
+      this.word = word
+    })
   }
 
   send(){
